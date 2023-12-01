@@ -18,6 +18,12 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+            @if(Session::has('message'))
+                <x-flash-message :message="session('message')"/>
+            @elseif(Session::has('error'))
+                <x-flash-error-message :message="session('error')"/>
+            @endif
+
             @include('layouts.navigation')
 
             <!-- Page Heading -->

@@ -24,6 +24,10 @@ Route::get('/hospitals', [HospitalController::class, 'index'])
 
 Route::post('/hospitals/add', [HospitalController::class, 'create'])
     ->middleware(['auth', 'verified']);
+Route::post('/hospitals/update', [HospitalController::class, 'update'])
+    ->middleware(['auth', 'verified']);
+Route::post('/hospitals', [HospitalController::class, 'destroy'])
+    ->middleware(['auth', 'verified']);
 
 //Route::get('/patients' [PatientController])->middleware(['auth', 'verified'])->name('patients');
 

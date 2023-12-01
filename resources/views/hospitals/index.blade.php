@@ -45,11 +45,11 @@
                                         <div class="flex">
                                             <div x-data='{ show: false }' class="mr-2">
                                                 <button @click="show = true" type="button" class="rounded-md bg-green-700 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-600">Edit</button>
-{{--                                                <x-edit-hospital :hospital="$hospital"/>--}}
+                                                <x-edit-hospital :hospital="$hospital"/>
                                             </div>
                                             <div x-data="{ show: false }" class="mr-2">
                                                 <button @click="show = true" type="button" class="rounded-md bg-red-500 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-400">Remove</button>
-{{--                                                <x-confirmation-modal :model="$hospital"/>--}}
+                                                <x-confirmation-modal :model="$hospital"/>
                                             </div>
                                         </div>
                                     </td>

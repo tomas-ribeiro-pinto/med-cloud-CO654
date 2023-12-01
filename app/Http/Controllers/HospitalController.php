@@ -35,41 +35,26 @@ class HospitalController extends Controller
 
     public function update(): \Illuminate\Http\RedirectResponse
     {
-        $faq = faq::find(request('id'));
+        $hospital = Hospital::find(request('id'));
         $attributes = request()->validate([
-            'question_pt' => ['required', 'max:100'],
-            'question_en' => ['required', 'max:100'],
-            'question_es' => ['required', 'max:100'],
-            'question_it' => ['required', 'max:100'],
-            'answer_pt' => ['required', 'max:3000'],
-            'answer_en' => ['required', 'max:3000'],
-            'answer_es' => ['required', 'max:3000'],
-            'answer_it' => ['required', 'max:3000'],
+            'name' => ['required', 'max:100'],
+            'address_line1' => ['required', 'max:100'],
+            'address_line2' => ['required', 'max:100'],
         ]);
 
-        $faq->update($attributes);
+        $hospital->update($attributes);
 
-        activity()
-            ->performedOn($faq)
-            ->causedBy(auth()->user())
-            ->log('faq Updated by ' . auth()->user()->name . ' at ' . now());
-
-        return back()->with('message', 'Registo Modificado!');
+        return back()->with('message', 'Record Modified!');
     }
 
     public function destroy(): \Illuminate\Http\RedirectResponse
     {
         if(request('id'))
         {
-            $faq = faq::find(request('id'));
-            $faq->delete();
+            $hospital = Hospital::find(request('id'));
+            $hospital->delete();
         }
 
-        activity()
-            ->performedOn($faq)
-            ->causedBy(auth()->user())
-            ->log('faq Deleted by ' . auth()->user()->name . ' at ' . now());
-
-        return back()->with('message', 'Registo removido!');
+        return back()->with('message', 'Record Removed!');
     }
 }
