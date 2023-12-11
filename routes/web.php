@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HospitalController;
+use App\Http\Controllers\PatientController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +30,16 @@ Route::post('/hospitals/update', [HospitalController::class, 'update'])
 Route::post('/hospitals', [HospitalController::class, 'destroy'])
     ->middleware(['auth', 'verified']);
 
-//Route::get('/patients' [PatientController])->middleware(['auth', 'verified'])->name('patients');
+Route::get('/patients', [PatientController::class, 'index'])
+    ->middleware(['auth', 'verified'])->name('patients');
+Route::get('/patients/{hospital}', [PatientController::class, 'show'])
+    ->middleware(['auth', 'verified']);
+Route::post('/patients/{hospital}/add', [PatientController::class, 'create'])
+    ->middleware(['auth', 'verified']);
+Route::post('/patients/{hospital}/update', [PatientController::class, 'update'])
+    ->middleware(['auth', 'verified']);
+Route::post('/patients/{hospital}', [PatientController::class, 'destroy'])
+    ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

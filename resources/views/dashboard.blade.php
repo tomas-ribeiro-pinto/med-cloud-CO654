@@ -17,7 +17,7 @@
                         <p class="text-2xl font-bold text-white">Hospitals</p>
                     </div>
                 </a>
-                <a href=""
+                <a href="{{route('patients')}}"
                    class="flex flex-1 justify-center items-center bg-purple-800 rounded-xl h-56 w-36 p-4 m-4">
                     <div class="flex-col">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mx-auto text-white mb-2">

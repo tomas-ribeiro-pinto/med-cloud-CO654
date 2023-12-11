@@ -122,5 +122,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="bucks_nourish_ESD_CO659" />
   </component>
 </module>
