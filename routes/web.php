@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BillController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\ProfileController;
@@ -22,7 +23,6 @@ Route::get('/', function () {
 
 Route::get('/hospitals', [HospitalController::class, 'index'])
     ->middleware(['auth', 'verified'])->name('hospitals');
-
 Route::post('/hospitals/add', [HospitalController::class, 'create'])
     ->middleware(['auth', 'verified']);
 Route::post('/hospitals/update', [HospitalController::class, 'update'])
@@ -39,6 +39,15 @@ Route::post('/patients/{hospital}/add', [PatientController::class, 'create'])
 Route::post('/patients/{hospital}/update', [PatientController::class, 'update'])
     ->middleware(['auth', 'verified']);
 Route::post('/patients/{hospital}', [PatientController::class, 'destroy'])
+    ->middleware(['auth', 'verified']);
+
+Route::get('/bills', [BillController::class, 'index'])
+    ->middleware(['auth', 'verified'])->name('bills');
+Route::post('/bills/add', [BillController::class, 'create'])
+    ->middleware(['auth', 'verified']);
+Route::post('/bills/update', [BillController::class, 'update'])
+    ->middleware(['auth', 'verified']);
+Route::post('/bills', [BillController::class, 'destroy'])
     ->middleware(['auth', 'verified']);
 
 Route::middleware('auth')->group(function () {

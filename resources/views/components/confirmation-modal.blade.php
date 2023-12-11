@@ -20,7 +20,7 @@
                     <div class="space-y-12">
                         <div class="border-b border-gray-900/10 pb-12">
                             <input type="hidden" name="id" value="{{$model->id}}">
-                            <h2 class="text-base font-semibold leading-7 text-gray-900">Remover</h2>
+                            <h2 class="text-base font-semibold leading-7 text-gray-900">Remove</h2>
                             <p class="mt-1 text-lg leading-6 text-gray-600">Are you sure you want to delete the record?</p>
                         </div>
                     </div>

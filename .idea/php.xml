@@ -235,6 +235,13 @@
       <path value="$PROJECT_DIR$/../bucks_nourish_ESD_CO659/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/../bucks_nourish_ESD_CO659/vendor/composer" />
       <path value="$PROJECT_DIR$/../bucks_nourish_ESD_CO659/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/laraveldaily/laravel-invoices" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
