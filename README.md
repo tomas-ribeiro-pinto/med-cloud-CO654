@@ -8,7 +8,8 @@ The application is intended as a prototype for a fictious medical company. It al
 
 
 ### Cloud Architecture:
-![Cloud Architecture]()
+![Cloud Architecture](https://github.com/tomas-ribeiro-pinto/med-cloud-CO654/blob/main/architecture.png)
+![Application Dashboard](https://github.com/tomas-ribeiro-pinto/med-cloud-CO654/blob/main/med_cloud.png)
 
 ## Getting Started
 
