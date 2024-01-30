@@ -6,6 +6,9 @@
         <Configuration>
           <option name="path" value="$PROJECT_DIR$/tests" />
         </Configuration>
+        <Configuration>
+          <option name="path" value="$PROJECT_DIR$/../bucks_nourish_ESD_CO659/tests" />
+        </Configuration>
       </list>
     </option>
   </component>

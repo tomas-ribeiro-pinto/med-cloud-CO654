@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Bill;
 use App\Models\Patient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use LaravelDaily\Invoices\Classes\Buyer;
 use LaravelDaily\Invoices\Classes\InvoiceItem;
 use LaravelDaily\Invoices\Classes\Party;
@@ -72,6 +73,7 @@ class BillController extends Controller
             ->save('public');
 
         $bill->url_path = $invoice->url();
+
         $bill->save();
 
         return back()->with('message', 'Record Added!');
@@ -102,6 +104,8 @@ class BillController extends Controller
         if(request('id'))
         {
             $bill = Bill::find(request('id'));
+//            $filename = explode('/Bills/',$bill->url_path);
+//            Storage::disk('s3')->delete('/Bills/'.$filename[1]);
             $bill->delete();
         }
 
